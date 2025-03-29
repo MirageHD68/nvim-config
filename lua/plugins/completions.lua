@@ -7,6 +7,11 @@ return {
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-nvim-lsp-signature-help",
+            "hrsh7th/cmp-nvim-lua",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-vsnip",
 		},
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -38,6 +43,11 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
+                    { name = "buffer" },
+                    { name = 'nvim_lsp_signature_help' },
+                    { name = 'nvim_lua' },
+                    { name = 'path' },
+                    { name = 'vsnip' },
 				}, {
 					{ name = "buffer" },
 				}),
